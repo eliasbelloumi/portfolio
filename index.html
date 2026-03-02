@@ -16,15 +16,17 @@
       content="Portfolio d'Elias Belloumi, étudiant ingénieur en IA et Data Science à l'UTC et l'UPC BarcelonaTech."
     />
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/og-image.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://eliasbelloumi.com" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Elias Belloumi — AI & Data Science" />
-    <meta property="og:description" content="AI &amp; Data Science engineering student at UTC &amp; UPC BarcelonaTech. Researcher in bioinformatics and machine learning." />
-    <meta property="og:image" content="https://eliasbelloumi.com/assets/images/og-image.svg" />
+    <meta property="og:description" content="AI &amp; Data Science engineering student at UTC &amp; UPC BarcelonaTech. Building ML and bioinformatics projects." />
+    <meta property="og:image" content="https://eliasbelloumi.com/assets/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://eliasbelloumi.com" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
@@ -32,8 +34,8 @@
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Elias Belloumi — AI & Data Science" />
-    <meta name="twitter:description" content="AI &amp; Data Science engineering student. Researcher. Builder." />
-    <meta name="twitter:image" content="https://eliasbelloumi.com/assets/images/og-image.svg" />
+    <meta name="twitter:description" content="AI &amp; Data Science engineering student. Builder." />
+    <meta name="twitter:image" content="https://eliasbelloumi.com/assets/images/og-image.png" />
 
     <!-- Preconnect for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -327,111 +329,44 @@
               </p>
             </div>
 
-            <!-- Right: Illustration -->
-            <div
-              class="about-illustration animate-on-scroll"
-              aria-hidden="true"
-            >
-              <svg
-                viewBox="0 -20 260 250"
-                xmlns="http://www.w3.org/2000/svg"
-                class="venn-svg"
-              >
-                <!-- Connecting lines (drawn first, behind nodes) -->
-                <line
-                  x1="130"
-                  y1="48"
-                  x2="130"
-                  y2="118"
-                  stroke="#4A5060"
-                  stroke-width="1"
-                  opacity="0.4"
-                />
-                <line
-                  x1="50"
-                  y1="168"
-                  x2="130"
-                  y2="118"
-                  stroke="#4A5060"
-                  stroke-width="1"
-                  opacity="0.4"
-                />
-                <line
-                  x1="210"
-                  y1="168"
-                  x2="130"
-                  y2="118"
-                  stroke="#4A5060"
-                  stroke-width="1"
-                  opacity="0.4"
-                />
+            <!-- Right: Venn + photo au centre -->
+            <div class="about-illustration animate-on-scroll" aria-hidden="true">
+              <svg viewBox="0 -20 260 265" xmlns="http://www.w3.org/2000/svg" class="venn-svg">
+                <defs>
+                  <linearGradient id="photoRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#7C5CBF"/>
+                    <stop offset="100%" style="stop-color:#0EA5C9"/>
+                  </linearGradient>
+                  <radialGradient id="photoFade" cx="50%" cy="50%" r="50%">
+                    <stop offset="65%" stop-color="white" stop-opacity="1"/>
+                    <stop offset="100%" stop-color="white" stop-opacity="0"/>
+                  </radialGradient>
+                  <mask id="centerPhotoMask">
+                    <circle cx="130" cy="130" r="40" fill="url(#photoFade)"/>
+                  </mask>
+                </defs>
 
-                <!-- Center node -->
-                <circle cx="130" cy="118" r="4" fill="#8A909E" opacity="0.5" />
+                <!-- Connecting lines -->
+                <line x1="130" y1="48" x2="130" y2="130" stroke="#4A5060" stroke-width="1" opacity="0.4"/>
+                <line x1="50" y1="168" x2="130" y2="130" stroke="#4A5060" stroke-width="1" opacity="0.4"/>
+                <line x1="210" y1="168" x2="130" y2="130" stroke="#4A5060" stroke-width="1" opacity="0.4"/>
 
                 <!-- Node: Informatique (top) -->
-                <circle
-                  cx="130"
-                  cy="48"
-                  r="32"
-                  fill="rgba(79,142,247,0.1)"
-                  stroke="#0EA5C9"
-                  stroke-width="1.5"
-                  opacity="0.9"
-                />
-                <text
-                  x="130"
-                  y="11"
-                  text-anchor="middle"
-                  class="venn-label"
-                  fill="#0EA5C9"
-                  data-fr="Informatique"
-                  data-en="Computer Sci."
-                >
-                  Informatique
-                </text>
+                <circle cx="130" cy="48" r="32" fill="rgba(14,165,201,0.1)" stroke="#0EA5C9" stroke-width="1.5" opacity="0.9"/>
+                <text x="130" y="11" text-anchor="middle" class="venn-label" fill="#0EA5C9" data-fr="Informatique" data-en="Computer Sci.">Informatique</text>
 
                 <!-- Node: Data Science (bottom-left) -->
-                <circle
-                  cx="50"
-                  cy="168"
-                  r="32"
-                  fill="rgba(124,92,191,0.1)"
-                  stroke="#7C5CBF"
-                  stroke-width="1.5"
-                  opacity="0.9"
-                />
-                <text
-                  x="50"
-                  y="215"
-                  text-anchor="middle"
-                  class="venn-label"
-                  fill="#7C5CBF"
-                >
-                  Data Science
-                </text>
+                <circle cx="50" cy="168" r="32" fill="rgba(124,92,191,0.1)" stroke="#7C5CBF" stroke-width="1.5" opacity="0.9"/>
+                <text x="50" y="215" text-anchor="middle" class="venn-label" fill="#7C5CBF">Data Science</text>
 
                 <!-- Node: Recherche (bottom-right) -->
-                <circle
-                  cx="210"
-                  cy="168"
-                  r="32"
-                  fill="rgba(45,212,160,0.1)"
-                  stroke="#2DD4A0"
-                  stroke-width="1.5"
-                  opacity="0.9"
-                />
-                <text
-                  x="210"
-                  y="215"
-                  text-anchor="middle"
-                  class="venn-label"
-                  fill="#2DD4A0"
-                  data-fr="Recherche"
-                  data-en="Research"
-                >
-                  Recherche
-                </text>
+                <circle cx="210" cy="168" r="32" fill="rgba(16,185,129,0.1)" stroke="#10B981" stroke-width="1.5" opacity="0.9"/>
+                <text x="210" y="215" text-anchor="middle" class="venn-label" fill="#10B981" data-fr="Recherche" data-en="Research">Recherche</text>
+
+                <!-- Centre : anneau dégradé + photo -->
+                <circle cx="130" cy="130" r="43" fill="url(#photoRingGrad)" opacity="0.9"/>
+                <circle cx="130" cy="130" r="40" fill="#08090C"/>
+                <image href="assets/cv/photo_cv.png" x="90" y="90" width="80" height="80" mask="url(#centerPhotoMask)" preserveAspectRatio="xMidYMin slice"/>
               </svg>
             </div>
           </div>
