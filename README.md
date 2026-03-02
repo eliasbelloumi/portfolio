@@ -1,33 +1,33 @@
 # Portfolio — Elias Belloumi
 
-Site portfolio personnel, bilingue FR/EN, en HTML, CSS et JavaScript vanilla.
-Aucune dépendance, aucun framework — ouvrez simplement `index.html` dans un navigateur.
+Personal bilingual (FR/EN) portfolio built with vanilla HTML, CSS, and JavaScript.
+No dependencies, no framework — just open `index.html` in a browser.
 
 ---
 
-## Lancer le site
+## Running the site
 
 ```bash
 open index.html   # macOS
-# ou double-cliquez sur index.html dans l'explorateur de fichiers
+# or double-click index.html in your file explorer
 ```
 
-Aucun serveur ni build n'est nécessaire. Tous les assets sont locaux à l'exception des polices (Google Fonts, chargées via CDN).
+No server or build step required. All assets are local except for fonts (Google Fonts, loaded via CDN).
 
 ---
 
-## Structure des fichiers
+## File structure
 
 ```
 portfolio/
-├── index.html                  ← page unique (toutes les sections)
+├── index.html                  ← single page (all sections)
 ├── css/
-│   ├── variables.css           ← tokens de design (couleurs, polices, espacements)
-│   ├── reset.css               ← reset CSS minimal
-│   ├── base.css                ← typographie et styles globaux
-│   ├── layout.css              ← conteneurs et sections
-│   ├── components.css          ← boutons, tags, timeline, tooltips
-│   ├── responsive.css          ← breakpoints tablette (900px) et mobile (640px)
+│   ├── variables.css           ← design tokens (colors, fonts, spacing)
+│   ├── reset.css               ← minimal CSS reset
+│   ├── base.css                ← typography and global styles
+│   ├── layout.css              ← containers and sections
+│   ├── components.css          ← buttons, tags, timeline, tooltips
+│   ├── responsive.css          ← tablet (900px) and mobile (640px) breakpoints
 │   └── sections/
 │       ├── nav.css
 │       ├── hero.css
@@ -39,66 +39,67 @@ portfolio/
 │       ├── engagement.css
 │       └── contact.css
 ├── js/
-│   ├── i18n.js                 ← toggle FR/EN (doit être chargé en premier)
-│   ├── particles.js            ← réseau de particules en canvas (hero)
-│   ├── typewriter.js           ← effet machine à écrire des titres rotatifs
-│   ├── animations.js           ← scroll reveals, compteurs animés, EEG path
-│   ├── projects.js             ← filtre de la grille de projets
-│   └── nav.js                  ← nav sticky, menu hamburger, scroll actif
+│   ├── i18n.js                 ← FR/EN toggle (must be loaded first)
+│   ├── particles.js            ← canvas particle network (hero)
+│   ├── typewriter.js           ← rotating typewriter effect for hero titles
+│   ├── animations.js           ← scroll reveals, animated counters, EEG path
+│   ├── projects.js             ← project grid filter
+│   └── nav.js                  ← sticky nav, hamburger menu, active scroll
 └── assets/
-    ├── icons/                  ← SVG (logos, pictos)
-    └── images/                 ← image OG, photos éventuelles
+    ├── icons/                  ← SVG icons and logos
+    └── images/                 ← OG image, photos
 ```
 
 ---
 
-## Fonctionnalités
+## Features
 
-### Bilingue FR / EN
-Chaque texte porte des attributs `data-fr` et `data-en` sur son élément HTML.
-`i18n.js` parcourt tous ces éléments et injecte le texte de la langue active à chaque bascule.
-La préférence est sauvegardée dans `localStorage` et la langue du navigateur est détectée au premier chargement.
+### Bilingual FR / EN
+Every text element carries `data-fr` and `data-en` attributes.
+`i18n.js` iterates over all such elements and injects the active language's text on each toggle.
+The preference is saved to `localStorage`; the browser language is detected on first load.
 
 ### Animations
-- **Scroll reveals** — les éléments `.animate-on-scroll` apparaissent progressivement via `IntersectionObserver`.
-- **Typewriter** — les titres du hero s'écrivent et s'effacent en boucle.
-- **Particules** — réseau de points animés en canvas dans le hero.
-- **Compteurs** — les statistiques de la section About comptent jusqu'à leur valeur cible (easeOutExpo).
-- **EEG path** — le tracé SVG de la carte projet vedette se dessine à l'entrée dans le viewport.
+- **Scroll reveals** — `.animate-on-scroll` elements fade in progressively via `IntersectionObserver`.
+- **Typewriter** — hero titles are typed and erased in a loop.
+- **Particles** — animated canvas dot network in the hero section.
+- **Counters** — About section stats count up to their target value (easeOutExpo).
+- **EEG path** — the SVG stroke on the featured project card draws itself when entering the viewport.
 
-Toutes les animations sont désactivées si `prefers-reduced-motion: reduce` est actif.
+All animations are disabled when `prefers-reduced-motion: reduce` is active.
 
-### Filtre de projets
-Les boutons de filtre ajoutent la classe `.filtered-out` (opacité réduite) aux cartes non correspondantes, sans modifier l'ordre du DOM ni la mise en page.
+### Project filter
+Filter buttons add the `.filtered-out` class (reduced opacity) to non-matching cards, without reordering the DOM or affecting layout.
 
-### Tooltips de compétences
-Les tags de compétences affichent une info-bulle au survol.
-Chaque tag porte `data-used-in-fr` et `data-used-in-en` ; `i18n.js` copie la valeur active dans `data-tooltip`, que le pseudo-élément `::after` du CSS lit via `attr(data-tooltip)`.
+### Skill tooltips
+Skill tags display a tooltip on hover.
+Each tag carries `data-used-in-fr` and `data-used-in-en`; `i18n.js` copies the active value into `data-tooltip`, which the CSS `::after` pseudo-element reads via `attr(data-tooltip)`.
 
 ---
 
-## Personnalisation
+## Customisation
 
-### Modifier les textes
-Tous les textes bilingues sont directement dans `index.html` via `data-fr` / `data-en`.
-Les titres du typewriter se trouvent dans `js/i18n.js` (`TYPEWRITER_TITLES`).
+### Editing text
+All bilingual content lives directly in `index.html` via `data-fr` / `data-en` attributes.
+Typewriter titles are defined in `js/i18n.js` (`TYPEWRITER_TITLES`).
 
-### Modifier les couleurs
-Éditez les variables CSS dans `css/variables.css` :
+### Changing colours
+Edit the CSS custom properties in `css/variables.css`:
 ```css
---accent-blue:   #4F8EF7;
+--accent-blue:   #0EA5C9;
 --accent-violet: #7C5CBF;
---accent-teal:   #2DD4A0;
---bg-primary:    #0D0F14;
+--accent-teal:   #10B981;
+--accent-coral:  #C9A84C;
+--bg-primary:    #08090C;
 ```
 
-### Ajouter un projet
-Dans `index.html`, dupliquez une `.project-card` et renseignez les attributs `data-tags` avec les slugs correspondants (`ml`, `data`, `research`, `systems`).
+### Adding a project
+In `index.html`, duplicate a `.project-card` and fill in the `data-tags` attribute with the relevant slugs (`ml`, `data`, `research`, `systems`).
 
 ---
 
-## Accessibilité
-- Navigation au clavier complète (Tab, Escape pour fermer le menu)
-- `aria-label`, `aria-expanded`, `aria-live` sur les éléments interactifs
-- `<html lang>` mis à jour à chaque changement de langue
-- Animations désactivées pour `prefers-reduced-motion`
+## Accessibility
+- Full keyboard navigation (Tab, Escape to close the menu)
+- `aria-label`, `aria-expanded`, `aria-live` on interactive elements
+- `<html lang>` updated on every language switch
+- Animations disabled for `prefers-reduced-motion`
