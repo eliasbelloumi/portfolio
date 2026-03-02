@@ -1,0 +1,182 @@
+/* ===================== RESPONSIVE ===================== */
+
+/* Footer */
+footer {
+  padding: 1.25rem var(--container-px);
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.footer-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-size: 1rem;
+  color: var(--text-tertiary);
+  transition: color var(--transition-fast);
+  padding: 0.25rem 0.5rem;
+}
+.footer-logo:hover { color: var(--accent-blue); }
+
+.footer-copy,
+.footer-tagline {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+/* ===================== TABLET (max 900px) ===================== */
+@media (max-width: 900px) {
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-illustration { width: 200px; margin: 0 auto; }
+
+  /* Skills */
+  .skills-tags-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Education */
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects grid */
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Featured project */
+  .project-featured {
+    grid-template-columns: 1fr;
+  }
+  .project-featured-visual {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    min-height: 180px;
+  }
+
+  /* Stats */
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  /* Timeline — ajustement tablette */
+  .timeline { padding-left: 1.75rem; }
+  .timeline-dot { left: -24px; }
+
+  /* Gaps grilles */
+  .education-grid { gap: 1rem; }
+  .skills-tags-grid { gap: 1rem; }
+
+  /* Engagement — highlights ne dépasse pas sur tablette */
+  .engagement-highlights { min-width: 120px; }
+}
+
+/* ===================== MOBILE (max 640px) ===================== */
+@media (max-width: 640px) {
+  /* Nav */
+  .nav-links {
+    position: fixed;
+    top: 68px;
+    right: 0;
+    bottom: 0;
+    width: min(280px, 80vw);
+    background: rgba(8, 9, 12, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 1px solid var(--border-color);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 1.5rem 1.25rem;
+    transform: translateX(100%);
+    transition: transform var(--transition-med);
+    z-index: 999;
+    margin-left: 0;
+  }
+  .nav-links.mobile-open {
+    transform: translateX(0);
+  }
+  .nav-link {
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-logo-name { display: none; }
+  .nav-hamburger { display: flex; }
+  .nav-actions { gap: 0.5rem; }
+
+  /* Hero */
+  .hero-ctas { flex-direction: column; align-items: center; }
+  .hero-ctas .btn { width: 100%; max-width: 260px; justify-content: center; }
+
+  /* About */
+  .stats-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  /* Projects grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Engagement */
+  .engagement-card { grid-template-columns: 1fr; }
+  .engagement-highlights {
+    flex-direction: row;
+    justify-content: space-around;
+    border-left: none;
+    border-top: 1px solid rgba(124, 92, 191, 0.15);
+    padding: 1.25rem 1.75rem;
+  }
+  .engagement-stat { border-bottom: none; padding: 0; }
+
+  /* Timeline */
+  .timeline { padding-left: 1.5rem; }
+  .timeline-dot { left: -22px; }
+
+  /* Featured project visual — encore plus compact sur mobile */
+  .project-featured-visual { min-height: 140px; }
+
+  /* Skills: 1 colonne sur mobile */
+  .skills-tags-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  /* Contact */
+  .contact-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-actions .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+/* ===================== VERY SMALL (max 380px) ===================== */
+@media (max-width: 380px) {
+  .hero-name { font-size: 2rem; }
+  .section-title { font-size: 1.4rem; }
+  .stat-number { font-size: 2rem; }
+}

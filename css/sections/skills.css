@@ -1,0 +1,93 @@
+.skills-layout {
+  display: block;
+}
+
+.skills-tags-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.skill-group-title {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+/* Methods — full-width strip below the tags grid */
+.methods-row {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+.methods-row .skill-group-title {
+  display: block;
+  margin-bottom: 0.65rem;
+}
+
+/* Languages — single horizontal strip below the tags grid */
+.languages-row {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.languages-row .skill-group-title {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.lang-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.9rem;
+  transition: border-color var(--transition-fast);
+}
+.lang-item:hover { border-color: var(--border-hover); }
+
+.lang-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.lang-level {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+}
+
+.lang-level--native {
+  background: rgba(14,165,201,0.12);
+  color: var(--accent-blue);
+  border: 1px solid rgba(14,165,201,0.2);
+}
+
+.lang-level--fluent {
+  background: rgba(16,185,129,0.1);
+  color: var(--accent-teal);
+  border: 1px solid rgba(16,185,129,0.2);
+}
+
+.lang-level--inter {
+  background: rgba(124,92,191,0.1);
+  color: var(--accent-violet);
+  border: 1px solid rgba(124,92,191,0.2);
+}

@@ -1,0 +1,170 @@
+/* ===================== BUTTONS ===================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: var(--accent-blue);
+  color: var(--bg-primary);
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background: #38BDF8;
+  box-shadow: 0 0 20px rgba(14, 165, 201, 0.4);
+}
+
+.btn-cv {
+  background: var(--accent-coral);
+  color: var(--bg-primary);
+  font-weight: 600;
+}
+.btn-cv:hover {
+  background: #D4B86A;
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+.btn-outline:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+.btn-ghost:hover {
+  color: var(--text-primary);
+  border-color: var(--text-tertiary);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.82rem;
+}
+
+
+/* ===================== TAGS ===================== */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  position: relative;
+  cursor: default;
+}
+
+.tag-blue    { background: var(--accent-blue-dim);   color: var(--accent-blue);   border-color: rgba(14,165,201,0.25); }
+.tag-violet  { background: var(--accent-violet-dim); color: var(--accent-violet); border-color: rgba(124,92,191,0.25); }
+.tag-teal    { background: var(--accent-teal-dim);   color: var(--accent-teal);   border-color: rgba(16,185,129,0.25); }
+.tag-neutral { background: var(--bg-tertiary);       color: var(--text-secondary); border-color: var(--border-color); }
+
+.tag-sm {
+  padding: 0.18rem 0.5rem;
+  font-size: 0.7rem;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+/* Tag tooltip */
+.tag[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+  z-index: 10;
+  font-family: var(--font-body);
+}
+.tag[data-tooltip]:hover::after { opacity: 1; }
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+/* ===================== NAV CV BUTTON ===================== */
+.nav-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.32rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-coral);
+  border: 1.5px solid var(--accent-coral);
+  white-space: nowrap;
+  transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.nav-cv-btn:hover {
+  background: var(--accent-coral);
+  color: var(--bg-primary);
+  box-shadow: 0 0 14px rgba(201, 168, 76, 0.35);
+}
+
+/* ===================== BACK TO TOP ===================== */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast), background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  z-index: 200;
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: var(--bg-tertiary);
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}

@@ -1,0 +1,47 @@
+:root {
+  /* Colors */
+  --bg-primary:    #08090C;
+  --bg-secondary:  #0F1015;
+  --bg-tertiary:   #181820;
+  --bg-card:       #12131A;
+
+  --accent-blue:   #0EA5C9;
+  --accent-violet: #7C5CBF;
+  --accent-teal:   #10B981;
+  --accent-coral:  #C9A84C;
+
+  --accent-blue-dim:   rgba(14, 165, 201, 0.15);
+  --accent-violet-dim: rgba(124, 92, 191, 0.15);
+  --accent-teal-dim:   rgba(16, 185, 129, 0.15);
+  --accent-coral-dim:  rgba(201, 168, 76, 0.15);
+
+  --text-primary:   #E8EAF0;
+  --text-secondary: #8A909E;
+  --text-tertiary:  #4A5060;
+
+  --border-color:   rgba(255,255,255,0.07);
+  --border-hover:   rgba(14, 165, 201, 0.35);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --section-py: clamp(4rem, 8vw, 7rem);
+  --container-max: 1100px;
+  --container-px: clamp(1rem, 5vw, 3rem);
+
+  /* Radii */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-med:  0.4s ease;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.35);
+  --shadow-hover: 0 8px 40px rgba(0,0,0,0.5);
+}

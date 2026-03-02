@@ -1,0 +1,1914 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title
+      data-fr="Elias Belloumi — Ingénieur IA & Data Science"
+      data-en="Elias Belloumi — AI & Data Science Engineer"
+    >
+      Elias Belloumi — Ingénieur IA & Data Science
+    </title>
+    <meta
+      name="description"
+      data-fr="Portfolio d'Elias Belloumi, étudiant ingénieur en IA et Data Science à l'UTC et l'UPC BarcelonaTech."
+      data-en="Portfolio of Elias Belloumi, AI & Data Science engineering student at UTC and UPC BarcelonaTech."
+      content="Portfolio d'Elias Belloumi, étudiant ingénieur en IA et Data Science à l'UTC et l'UPC BarcelonaTech."
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/og-image.svg" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://eliasbelloumi.com" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Elias Belloumi — AI & Data Science" />
+    <meta property="og:description" content="AI &amp; Data Science engineering student at UTC &amp; UPC BarcelonaTech. Researcher in bioinformatics and machine learning." />
+    <meta property="og:image" content="https://eliasbelloumi.com/assets/images/og-image.svg" />
+    <meta property="og:url" content="https://eliasbelloumi.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Elias Belloumi — AI & Data Science" />
+    <meta name="twitter:description" content="AI &amp; Data Science engineering student. Researcher. Builder." />
+    <meta name="twitter:image" content="https://eliasbelloumi.com/assets/images/og-image.svg" />
+
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections/nav.css" />
+    <link rel="stylesheet" href="css/sections/hero.css" />
+    <link rel="stylesheet" href="css/sections/about.css" />
+    <link rel="stylesheet" href="css/sections/skills.css" />
+    <link rel="stylesheet" href="css/sections/experience.css" />
+    <link rel="stylesheet" href="css/sections/projects.css" />
+    <link rel="stylesheet" href="css/sections/education.css" />
+    <link rel="stylesheet" href="css/sections/engagement.css" />
+    <link rel="stylesheet" href="css/sections/contact.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Skip to content -->
+    <a
+      href="#main"
+      class="skip-link"
+      data-fr="Aller au contenu"
+      data-en="Skip to content"
+      >Aller au contenu</a
+    >
+
+    <!-- ===================== NAVBAR ===================== -->
+    <header id="navbar" role="banner">
+      <nav class="nav-container" aria-label="Navigation principale">
+        <a href="#hero" class="nav-logo" aria-label="Elias Belloumi — Accueil">
+          <span class="nav-logo-name">Elias Belloumi</span>
+        </a>
+
+        <button
+          class="nav-hamburger"
+          id="hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links" role="menubar">
+          <a
+            href="#about"
+            class="nav-link"
+            role="menuitem"
+            data-fr="À propos"
+            data-en="About"
+            >À propos</a
+          >
+          <a
+            href="#skills"
+            class="nav-link"
+            role="menuitem"
+            data-fr="Compétences"
+            data-en="Skills"
+            >Compétences</a
+          >
+          <a
+            href="#experience"
+            class="nav-link"
+            role="menuitem"
+            data-fr="Expérience"
+            data-en="Experience"
+            >Expérience</a
+          >
+          <a
+            href="#projects"
+            class="nav-link"
+            role="menuitem"
+            data-fr="Projets"
+            data-en="Projects"
+            >Projets</a
+          >
+          <a
+            href="#education"
+            class="nav-link"
+            role="menuitem"
+            data-fr="Formation"
+            data-en="Education"
+            >Formation</a
+          >
+          <a
+            href="#engagement"
+            class="nav-link"
+            role="menuitem"
+            data-fr="Engagement"
+            data-en="Volunteering"
+            >Engagement</a
+          >
+          <a
+            href="#contact"
+            class="nav-link"
+            role="menuitem"
+            data-fr="Contact"
+            data-en="Contact"
+            >Contact</a
+          >
+        </div>
+
+        <div class="nav-actions">
+          <!-- CV Download -->
+          <a
+            href="CV_BELLOUMI_ELIAS.pdf"
+            download
+            class="nav-cv-btn"
+            aria-label="Télécharger le CV (PDF)"
+            >↓ CV</a
+          >
+
+          <!-- Language Toggle -->
+          <div
+            class="lang-toggle"
+            role="group"
+            aria-label="Sélecteur de langue"
+          >
+            <button
+              class="lang-btn active"
+              id="btn-fr"
+              lang="fr"
+              aria-pressed="true"
+              onclick="setLanguage('fr')"
+            >
+              FR
+            </button>
+            <button
+              class="lang-btn"
+              id="btn-en"
+              lang="en"
+              aria-pressed="false"
+              onclick="setLanguage('en')"
+            >
+              EN
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===================== MAIN ===================== -->
+    <main id="main">
+      <!-- ===== HERO ===== -->
+      <section id="hero" aria-label="Introduction">
+        <canvas id="hero-rd-canvas" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <p
+            class="hero-greeting animate-on-scroll"
+            data-fr="Bonjour, je suis"
+            data-en="Hi, I'm"
+          >
+            Bonjour, je suis
+          </p>
+          <h1 class="hero-name animate-on-scroll">Elias Belloumi</h1>
+          <div class="hero-title-wrap animate-on-scroll">
+            <span
+              class="hero-typewriter"
+              id="typewriter"
+              aria-live="polite"
+            ></span>
+            <span class="hero-cursor" aria-hidden="true">|</span>
+          </div>
+          <p
+            class="hero-tagline animate-on-scroll"
+            data-fr="Construire des systèmes intelligents au service d'enjeux qui comptent: santé, biodiversité, durabilité."
+            data-en="Building intelligent systems in service of what matters: health, biodiversity, sustainability."
+          >
+            Construire des systèmes intelligents au service d'enjeux qui
+            comptent: santé, biodiversité, durabilité.
+          </p>
+          <div class="hero-ctas animate-on-scroll">
+            <a
+              href="#projects"
+              class="btn btn-primary"
+              data-fr="Voir mes projets"
+              data-en="View Projects"
+              >Voir mes projets</a
+            >
+            <a
+              href="#contact"
+              class="btn btn-outline"
+              data-fr="Me contacter"
+              data-en="Get in touch"
+              >Me contacter</a
+            >
+          </div>
+          <div class="hero-socials animate-on-scroll">
+            <a
+              href="https://github.com/eliasbelloumi"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/eliasbelloumi/"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p class="hero-location animate-on-scroll" aria-label="Localisation">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              width="14"
+              height="14"
+              aria-hidden="true"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Paris · Barcelona
+          </p>
+        </div>
+        <div class="hero-scroll-indicator" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section id="about" aria-labelledby="about-heading">
+        <div class="section-container">
+          <div class="about-grid">
+            <!-- Left: Story -->
+            <div class="about-story">
+              <span class="section-label" aria-hidden="true">01 — about</span>
+              <h2
+                id="about-heading"
+                class="section-title animate-on-scroll"
+                data-fr="Curieux par nature."
+                data-en="Curious by design."
+              >
+                Curieux par nature.
+              </h2>
+              <p
+                class="animate-on-scroll"
+                data-fr="Étudiant ingénieur en IA et Data Science à l'UTC (Sorbonne Universités) et à l'UPC BarcelonaTech, j'applique la modélisation computationnelle et le machine learning à des enjeux concrets: santé, biodiversité, sciences du vivant. Mon parcours HuTech m'a appris à concevoir des systèmes aussi utiles qu'éthiques."
+                data-en="Engineering student in AI and Data Science at UTC (Sorbonne Universités) and UPC BarcelonaTech, I apply computational modelling and machine learning to concrete challenges: health, biodiversity, life sciences. My HuTech background taught me to build systems that are as useful as they are ethical."
+              >
+                Étudiant ingénieur en IA et Data Science à l'UTC (Sorbonne
+                Universités) et à l'UPC BarcelonaTech, j'applique la
+                modélisation computationnelle et le machine learning à des
+                enjeux concrets: santé, biodiversité, sciences du vivant. Mon
+                parcours HuTech m'a appris à concevoir des systèmes aussi utiles
+                qu'éthiques.
+              </p>
+              <p
+                class="animate-on-scroll"
+                data-fr="Mon passage au CNRS/MNHN m'a permis d'appliquer ces compétences à la recherche réelle: concevoir des bases de données relationnelles, des pipelines d'analyse, et collaborer avec des chercheurs en anthropologie, biologie et génétique pour des publications scientifiques."
+                data-en="My time at CNRS/MNHN allowed me to apply these skills to real research: designing relational databases, analysis pipelines, and collaborating with researchers in anthropology, biology, and genetics for peer-reviewed publications."
+              >
+                Mon passage au CNRS/MNHN m'a permis d'appliquer ces compétences
+                à la recherche réelle: concevoir des bases de données
+                relationnelles, des pipelines d'analyse, et collaborer avec des
+                chercheurs en anthropologie, biologie et génétique pour des
+                publications scientifiques.
+              </p>
+            </div>
+
+            <!-- Right: Illustration -->
+            <div
+              class="about-illustration animate-on-scroll"
+              aria-hidden="true"
+            >
+              <svg
+                viewBox="0 -20 260 250"
+                xmlns="http://www.w3.org/2000/svg"
+                class="venn-svg"
+              >
+                <!-- Connecting lines (drawn first, behind nodes) -->
+                <line
+                  x1="130"
+                  y1="48"
+                  x2="130"
+                  y2="118"
+                  stroke="#4A5060"
+                  stroke-width="1"
+                  opacity="0.4"
+                />
+                <line
+                  x1="50"
+                  y1="168"
+                  x2="130"
+                  y2="118"
+                  stroke="#4A5060"
+                  stroke-width="1"
+                  opacity="0.4"
+                />
+                <line
+                  x1="210"
+                  y1="168"
+                  x2="130"
+                  y2="118"
+                  stroke="#4A5060"
+                  stroke-width="1"
+                  opacity="0.4"
+                />
+
+                <!-- Center node -->
+                <circle cx="130" cy="118" r="4" fill="#8A909E" opacity="0.5" />
+
+                <!-- Node: Informatique (top) -->
+                <circle
+                  cx="130"
+                  cy="48"
+                  r="32"
+                  fill="rgba(79,142,247,0.1)"
+                  stroke="#0EA5C9"
+                  stroke-width="1.5"
+                  opacity="0.9"
+                />
+                <text
+                  x="130"
+                  y="11"
+                  text-anchor="middle"
+                  class="venn-label"
+                  fill="#0EA5C9"
+                  data-fr="Informatique"
+                  data-en="Computer Sci."
+                >
+                  Informatique
+                </text>
+
+                <!-- Node: Data Science (bottom-left) -->
+                <circle
+                  cx="50"
+                  cy="168"
+                  r="32"
+                  fill="rgba(124,92,191,0.1)"
+                  stroke="#7C5CBF"
+                  stroke-width="1.5"
+                  opacity="0.9"
+                />
+                <text
+                  x="50"
+                  y="215"
+                  text-anchor="middle"
+                  class="venn-label"
+                  fill="#7C5CBF"
+                >
+                  Data Science
+                </text>
+
+                <!-- Node: Recherche (bottom-right) -->
+                <circle
+                  cx="210"
+                  cy="168"
+                  r="32"
+                  fill="rgba(45,212,160,0.1)"
+                  stroke="#2DD4A0"
+                  stroke-width="1.5"
+                  opacity="0.9"
+                />
+                <text
+                  x="210"
+                  y="215"
+                  text-anchor="middle"
+                  class="venn-label"
+                  fill="#2DD4A0"
+                  data-fr="Recherche"
+                  data-en="Research"
+                >
+                  Recherche
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Stat counters -->
+          <div class="stats-row">
+            <div class="stat-card animate-on-scroll">
+              <span class="stat-number" data-target="4">0</span>
+              <span
+                class="stat-label"
+                data-fr="Projets IA & Data Science"
+                data-en="AI & Data Science Projects"
+                >Projets IA & Data Science</span
+              >
+            </div>
+            <div class="stat-card animate-on-scroll">
+              <span class="stat-number" data-target="6">0</span
+              ><span class="stat-suffix" data-fr=" mois" data-en=" months">
+                mois</span
+              >
+              <span
+                class="stat-label"
+                data-fr="de stage de recherche scientifique"
+                data-en="of scientific research internship"
+                >de stage de recherche scientifique</span
+              >
+            </div>
+            <div class="stat-card animate-on-scroll">
+              <span class="stat-number" data-target="3">0</span>
+              <span
+                class="stat-label"
+                data-fr="domaines d'expertise"
+                data-en="fields of expertise"
+                >domaines d'expertise</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SKILLS ===== -->
+      <section id="skills" aria-labelledby="skills-heading">
+        <div class="section-container">
+          <span class="section-label" aria-hidden="true">02 — skills</span>
+          <h2
+            id="skills-heading"
+            class="section-title animate-on-scroll"
+            data-fr="Compétences techniques"
+            data-en="Technical Skills"
+          >
+            Compétences techniques
+          </h2>
+
+          <div class="skills-layout">
+            <!-- Skills Tags -->
+            <div class="skills-tags-grid">
+              <div class="skill-group animate-on-scroll">
+                <h3
+                  class="skill-group-title"
+                  data-fr="Langages"
+                  data-en="Languages"
+                >
+                  Langages
+                </h3>
+                <div class="tags-row">
+                  <span
+                    class="tag tag-blue"
+                    data-used-in-fr="Langage principal, ML & scripting"
+                    data-used-in-en="Main language, ML & scripting"
+                    >Python</span
+                  >
+                  <span
+                    class="tag tag-blue"
+                    data-used-in-fr="Statistiques & bioinformatique"
+                    data-used-in-en="Statistics & bioinformatics"
+                    >R</span
+                  >
+                  <span
+                    class="tag tag-blue"
+                    data-used-in-fr="Traitement du signal"
+                    data-used-in-en="Signal processing"
+                    >MATLAB</span
+                  >
+                  <span
+                    class="tag tag-blue"
+                    data-used-in-fr="Concurrence & systèmes distribués"
+                    data-used-in-en="Concurrency & distributed systems"
+                    >Go</span
+                  >
+                  <span
+                    class="tag tag-blue"
+                    data-used-in-fr="Programmation système bas niveau"
+                    data-used-in-en="Low-level system programming"
+                    >C++</span
+                  >
+                  <span
+                    class="tag tag-blue"
+                    data-used-in-fr="Requêtes & modélisation de données"
+                    data-used-in-en="Queries & data modelling"
+                    >SQL</span
+                  >
+                </div>
+              </div>
+              <div class="skill-group animate-on-scroll">
+                <h3
+                  class="skill-group-title"
+                  data-fr="IA & Machine Learning"
+                  data-en="AI & Machine Learning"
+                >
+                  IA & Machine Learning
+                </h3>
+                <div class="tags-row">
+                  <span
+                    class="tag tag-violet"
+                    data-used-in-fr="Classification, régression, clustering"
+                    data-used-in-en="Classification, regression, clustering"
+                    >Scikit-learn</span
+                  >
+                  <span
+                    class="tag tag-violet"
+                    data-used-in-fr="Manipulation & analyse de données"
+                    data-used-in-en="Data manipulation & analysis"
+                    >Pandas</span
+                  >
+                  <span
+                    class="tag tag-violet"
+                    data-used-in-fr="Analyses RNA-seq & omiques"
+                    data-used-in-en="RNA-seq & omics analyses"
+                    >Bioconductor</span
+                  >
+                  <span
+                    class="tag tag-violet"
+                    data-used-in-fr="Gradient Boosting, PCA, k-NN"
+                    data-used-in-en="Gradient Boosting, PCA, k-NN"
+                    >Machine Learning</span
+                  >
+                  <span
+                    class="tag tag-violet"
+                    data-used-in-fr="Expression différentielle de gènes"
+                    data-used-in-en="Differential gene expression"
+                    >DESeq2</span
+                  >
+                  <span
+                    class="tag tag-violet"
+                    data-used-in-fr="Matplotlib, Seaborn, ggplot2"
+                    data-used-in-en="Matplotlib, Seaborn, ggplot2"
+                    >Data Visualization</span
+                  >
+                </div>
+              </div>
+              <div class="skill-group animate-on-scroll">
+                <h3
+                  class="skill-group-title"
+                  data-fr="Data Engineering"
+                  data-en="Data Engineering"
+                >
+                  Data Engineering
+                </h3>
+                <div class="tags-row">
+                  <span
+                    class="tag tag-teal"
+                    data-used-in-fr="Bases de données relationnelles"
+                    data-used-in-en="Relational databases"
+                    >PostgreSQL</span
+                  >
+                  <span
+                    class="tag tag-teal"
+                    data-used-in-fr="Traitement de données à grande échelle"
+                    data-used-in-en="Large-scale data processing"
+                    >PySpark</span
+                  >
+                  <span
+                    class="tag tag-teal"
+                    data-used-in-fr="API REST & back-end web"
+                    data-used-in-en="REST API & web back-end"
+                    >Flask</span
+                  >
+                  <span
+                    class="tag tag-teal"
+                    data-used-in-fr="Dashboards & visualisation interactive"
+                    data-used-in-en="Dashboards & interactive visualisation"
+                    >Streamlit</span
+                  >
+                  <span
+                    class="tag tag-teal"
+                    data-used-in-fr="Conteneurisation & reproductibilité"
+                    data-used-in-en="Containerisation & reproducibility"
+                    >Docker</span
+                  >
+                  <span
+                    class="tag tag-teal"
+                    data-used-in-fr="Rédaction scientifique & typographie"
+                    data-used-in-en="Scientific writing & typesetting"
+                    >LaTeX</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Methods — full-width strip -->
+            <div class="methods-row animate-on-scroll">
+              <span
+                class="skill-group-title"
+                data-fr="Méthodes & Approches"
+                data-en="Methods & Approaches"
+                >Méthodes & Approches</span
+              >
+              <div class="tags-row">
+                <span
+                  class="tag tag-neutral"
+                  data-fr="Modélisation statistique"
+                  data-en="Statistical modelling"
+                  >Modélisation statistique</span
+                >
+                <span
+                  class="tag tag-neutral"
+                  data-fr="Traitement du signal"
+                  data-en="Signal processing"
+                  >Traitement du signal</span
+                >
+                <span
+                  class="tag tag-neutral"
+                  data-fr="Bioinformatique"
+                  data-en="Bioinformatics"
+                  >Bioinformatique</span
+                >
+                <span
+                  class="tag tag-neutral"
+                  data-fr="Systèmes multi-agents"
+                  data-en="Multi-agent systems"
+                  >Systèmes multi-agents</span
+                >
+                <span
+                  class="tag tag-neutral"
+                  data-fr="Analyse exploratoire"
+                  data-en="Exploratory analysis"
+                  >Analyse exploratoire</span
+                >
+                <span
+                  class="tag tag-neutral"
+                  data-fr="Communication scientifique"
+                  data-en="Scientific communication"
+                  >Communication scientifique</span
+                >
+              </div>
+            </div>
+
+            <!-- Languages — inline strip -->
+            <div class="languages-row animate-on-scroll">
+              <span
+                class="skill-group-title"
+                data-fr="Langues"
+                data-en="Languages"
+                >Langues</span
+              >
+              <div class="lang-list">
+                <div class="lang-item">
+                  <span class="lang-name" data-fr="Français" data-en="French"
+                    >Français</span
+                  >
+                  <span
+                    class="lang-level lang-level--native"
+                    data-fr="Natif"
+                    data-en="Native"
+                    >Natif</span
+                  >
+                </div>
+                <div class="lang-item">
+                  <span class="lang-name" data-fr="Anglais" data-en="English"
+                    >Anglais</span
+                  >
+                  <span
+                    class="lang-level lang-level--fluent"
+                    data-fr="Courant"
+                    data-en="Fluent"
+                    >Courant</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EXPERIENCE ===== -->
+      <section id="experience" aria-labelledby="experience-heading">
+        <div class="section-container">
+          <span class="section-label" aria-hidden="true">03 — experience</span>
+          <h2
+            id="experience-heading"
+            class="section-title animate-on-scroll"
+            data-fr="Expérience professionnelle"
+            data-en="Professional Experience"
+          >
+            Expérience professionnelle
+          </h2>
+
+          <div class="timeline" role="list">
+            <div class="timeline-track" aria-hidden="true"></div>
+            <!-- Entry 1: CNRS -->
+            <article class="timeline-item animate-on-scroll" role="listitem">
+              <div
+                class="timeline-dot"
+                style="--dot-color: var(--accent-violet)"
+              ></div>
+              <div class="timeline-card">
+                <div class="timeline-meta">
+                  <span class="timeline-period">Février 2024 — Août 2024</span>
+                  <span
+                    class="timeline-type tag tag-violet"
+                    data-fr="Recherche"
+                    data-en="Research"
+                    >Recherche</span
+                  >
+                </div>
+                <h3
+                  class="timeline-title"
+                  data-fr="Stagiaire — Structuration et collecte de données"
+                  data-en="Intern — Data Structuring & Collection"
+                >
+                  Stagiaire — Structuration et collecte de données
+                </h3>
+                <p class="timeline-org">
+                  CNRS &amp; Muséum National d'Histoire Naturelle
+                  <span class="timeline-location">· Paris</span>
+                </p>
+                <p
+                  class="timeline-context"
+                  data-fr="Contribution à un projet phare de l'ANR (Agence Nationale de la Recherche) portant sur les corrélations entre données génétiques, culturelles et botaniques — au service de la conservation de la biodiversité."
+                  data-en="Contributed to a French National Research Agency (ANR) flagship project analyzing correlations between genetic, cultural and botanical datasets — in support of biodiversity conservation."
+                >
+                  Contribution à un projet phare de l'ANR (Agence Nationale de
+                  la Recherche) portant sur les corrélations entre données
+                  génétiques, culturelles et botaniques au service de la
+                  conservation de la biodiversité.
+                </p>
+                <ul class="timeline-bullets">
+                  <li
+                    data-fr="Conception d'une base de données PostgreSQL pour harmoniser des datasets hétérogènes (anthropologie, génétique, botanique)"
+                    data-en="Designed a PostgreSQL relational database to harmonize heterogeneous datasets (anthropological, genetic, botanical)"
+                  >
+                    Conception d'une base de données PostgreSQL pour harmoniser
+                    des datasets hétérogènes (anthropologie, génétique,
+                    botanique)
+                  </li>
+                  <li
+                    data-fr="Développement d'une application Flask pour optimiser la collecte de données terrain, réduisant le temps de traitement de 50%"
+                    data-en="Developed a Flask web app to optimize field data collection, reducing processing time by 50%"
+                  >
+                    Développement d'une application Flask pour optimiser la
+                    collecte de données terrain, réduisant le temps de
+                    traitement de 50%
+                  </li>
+                  <li
+                    data-fr="Collaboration avec des chercheurs en sciences sociales et biologiques pour des pipelines d'analyse reproductibles"
+                    data-en="Collaborated with social scientists and biologists to co-design reproducible analysis pipelines for peer-reviewed publications"
+                  >
+                    Collaboration avec des chercheurs en sciences sociales et
+                    biologiques pour des pipelines d'analyse reproductibles
+                  </li>
+                  <li
+                    data-fr="Présentation des résultats à des partenaires internationaux (Institut Pertanian Bogor, Indonésie)"
+                    data-en="Presented results to international partners (Institut Pertanian Bogor, Indonesia)"
+                  >
+                    Présentation des résultats à des partenaires internationaux
+                    (Institut Pertanian Bogor, Indonésie)
+                  </li>
+                </ul>
+                <p class="timeline-supervised">
+                  <span data-fr="Encadré par" data-en="Supervised by"
+                    >Encadré par</span
+                  >
+                  <a
+                    href="https://www.cnrs.fr/fr/personne/helene-quach"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Dr. Hélène Quach</a
+                  >
+                  <span data-fr="et" data-en="and">et</span>
+                  <a
+                    href="https://www.paris-centre.cnrs.fr/fr/personne/amandine-henon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Dr. Amandine Hénon</a
+                  >.
+                </p>
+                <div class="tags-row">
+                  <span class="tag tag-sm">Python</span>
+                  <span class="tag tag-sm">Flask</span>
+                  <span class="tag tag-sm">PostgreSQL</span>
+                  <span class="tag tag-sm">SQL</span>
+                  <span class="tag tag-sm">ETL</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section id="projects" aria-labelledby="projects-heading">
+        <div class="section-container">
+          <span class="section-label" aria-hidden="true">04 — projects</span>
+          <h2
+            id="projects-heading"
+            class="section-title animate-on-scroll"
+            data-fr="Projets"
+            data-en="Projects"
+          >
+            Projets
+          </h2>
+
+          <!-- Filter Bar -->
+          <div
+            class="projects-filter animate-on-scroll"
+            role="group"
+            aria-label="Filtrer les projets"
+          >
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              data-fr="Tous"
+              data-en="All"
+            >
+              Tous
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="ml"
+              data-fr="ML / IA"
+              data-en="ML / AI"
+            >
+              ML / IA
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="data-eng"
+              data-fr="Data Eng"
+              data-en="Data Eng"
+            >
+              Data Eng
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="research"
+              data-fr="Recherche"
+              data-en="Research"
+            >
+              Recherche
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="systems"
+              data-fr="Systèmes"
+              data-en="Systems"
+            >
+              Systèmes
+            </button>
+          </div>
+
+          <!-- Featured Project -->
+          <article
+            class="project-featured animate-on-scroll"
+            data-tags="ml research"
+            aria-labelledby="proj-sleep-title"
+          >
+            <div class="project-featured-visual" aria-hidden="true">
+              <!-- EEG Waveform SVG Illustration -->
+              <svg
+                viewBox="0 0 600 200"
+                xmlns="http://www.w3.org/2000/svg"
+                class="eeg-svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="eeg-grad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stop-color="#0EA5C9" stop-opacity="0.3" />
+                    <stop
+                      offset="40%"
+                      stop-color="#0EA5C9"
+                      stop-opacity="0.8"
+                    />
+                    <stop
+                      offset="60%"
+                      stop-color="#2DD4A0"
+                      stop-opacity="0.9"
+                    />
+                    <stop
+                      offset="100%"
+                      stop-color="#0EA5C9"
+                      stop-opacity="0.3"
+                    />
+                  </linearGradient>
+                  <linearGradient
+                    id="arousal-grad"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#2DD4A0" stop-opacity="0.3" />
+                    <stop offset="100%" stop-color="#2DD4A0" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <!-- Background arousal region -->
+                <rect
+                  x="230"
+                  y="0"
+                  width="140"
+                  height="200"
+                  fill="url(#arousal-grad)"
+                  rx="2"
+                />
+                <rect
+                  x="230"
+                  y="0"
+                  width="140"
+                  height="200"
+                  fill="none"
+                  stroke="#2DD4A0"
+                  stroke-width="0.5"
+                  stroke-dasharray="4,4"
+                  opacity="0.5"
+                  rx="2"
+                />
+                <!-- EEG Signal -->
+                <path
+                  d="M 0 100 Q 20 100 30 100 L 50 100 Q 60 90 70 70 Q 80 50 90 100 L 100 100 Q 110 105 120 100 L 140 100 Q 150 95 160 80 Q 170 65 180 100 L 200 100 Q 210 100 220 100
+                       Q 232 40 240 20 Q 248 5 255 30 Q 262 55 270 80 Q 278 105 285 60 Q 292 15 300 40 Q 308 65 315 90 Q 322 115 330 100 Q 338 85 345 100 Q 355 115 365 100
+                       L 380 100 Q 390 102 400 100 L 420 100 Q 430 95 440 85 Q 450 75 460 100 L 480 100 Q 490 100 500 100 L 520 100 Q 530 98 540 88 Q 550 78 560 100 L 580 100 L 600 100"
+                  stroke="url(#eeg-grad)"
+                  stroke-width="2"
+                  fill="none"
+                  class="eeg-path"
+                />
+                <!-- Arousal label -->
+                <text
+                  x="300"
+                  y="185"
+                  text-anchor="middle"
+                  fill="#2DD4A0"
+                  font-family="JetBrains Mono"
+                  font-size="10"
+                  opacity="0.8"
+                >
+                  arousal detected
+                </text>
+                <!-- Grid lines -->
+                <line
+                  x1="0"
+                  y1="50"
+                  x2="600"
+                  y2="50"
+                  stroke="#0EA5C9"
+                  stroke-width="0.3"
+                  opacity="0.2"
+                />
+                <line
+                  x1="0"
+                  y1="100"
+                  x2="600"
+                  y2="100"
+                  stroke="#0EA5C9"
+                  stroke-width="0.3"
+                  opacity="0.3"
+                />
+                <line
+                  x1="0"
+                  y1="150"
+                  x2="600"
+                  y2="150"
+                  stroke="#0EA5C9"
+                  stroke-width="0.3"
+                  opacity="0.2"
+                />
+              </svg>
+            </div>
+            <div class="project-featured-content">
+              <span
+                class="project-badge"
+                data-fr="Projet phare"
+                data-en="Featured Project"
+                >Projet phare</span
+              >
+              <h3
+                id="proj-sleep-title"
+                class="project-title"
+                data-fr="Détection d'Arousals durant le Sommeil"
+                data-en="Sleep Arousal Detection"
+              >
+                Détection d'Arousals durant le Sommeil
+              </h3>
+              <p
+                class="project-desc"
+                data-fr="Pipeline de traitement du signal pour la détection d'arousals pendant le sommeil à partir de 17 marqueurs physiologiques (EEG, ECG). Modèle de Gradient Boosting avec seuils de décision optimisés pour maximiser l'utilité diagnostique."
+                data-en="Signal processing pipeline for sleep arousal detection from 17 physiological markers (EEG, ECG). Gradient Boosting model with optimized decision thresholds to maximize diagnostic utility."
+              >
+                Pipeline de traitement du signal pour la détection d'arousals
+                pendant le sommeil à partir de 17 marqueurs physiologiques (EEG,
+                ECG). Modèle de Gradient Boosting avec seuils de décision
+                optimisés pour maximiser l'utilité diagnostique.
+              </p>
+              <div class="tags-row">
+                <span class="tag tag-blue">Python</span>
+                <span class="tag tag-violet">Scikit-learn</span>
+                <span class="tag tag-blue">MATLAB</span>
+                <span class="tag tag-violet">Gradient Boosting</span>
+                <span
+                  class="tag tag-teal"
+                  data-fr="Traitement du signal"
+                  data-en="Signal Processing"
+                  >Traitement du signal</span
+                >
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/eliasbelloumi/sleep_arousal_ML_detection"
+                  class="btn btn-ghost btn-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-fr="Voir le code →"
+                  data-en="View Code →"
+                  >Voir le code →</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Projects Grid -->
+          <div class="projects-grid" role="list">
+            <!-- Multi-Agent Simulation -->
+            <article
+              class="project-card animate-on-scroll"
+              data-tags="systems"
+              role="listitem"
+              aria-labelledby="proj-agents-title"
+            >
+              <div class="project-card-header">
+                <svg
+                  class="project-icon"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <circle cx="20" cy="20" r="4" fill="var(--accent-teal)" />
+                  <circle
+                    cx="8"
+                    cy="10"
+                    r="3"
+                    fill="var(--accent-blue)"
+                    opacity="0.7"
+                  />
+                  <circle
+                    cx="32"
+                    cy="10"
+                    r="3"
+                    fill="var(--accent-blue)"
+                    opacity="0.7"
+                  />
+                  <circle
+                    cx="8"
+                    cy="30"
+                    r="3"
+                    fill="var(--accent-blue)"
+                    opacity="0.7"
+                  />
+                  <circle
+                    cx="32"
+                    cy="30"
+                    r="3"
+                    fill="var(--accent-blue)"
+                    opacity="0.7"
+                  />
+                  <line
+                    x1="20"
+                    y1="20"
+                    x2="8"
+                    y2="10"
+                    stroke="var(--accent-blue)"
+                    stroke-width="1"
+                    opacity="0.5"
+                  />
+                  <line
+                    x1="20"
+                    y1="20"
+                    x2="32"
+                    y2="10"
+                    stroke="var(--accent-blue)"
+                    stroke-width="1"
+                    opacity="0.5"
+                  />
+                  <line
+                    x1="20"
+                    y1="20"
+                    x2="8"
+                    y2="30"
+                    stroke="var(--accent-blue)"
+                    stroke-width="1"
+                    opacity="0.5"
+                  />
+                  <line
+                    x1="20"
+                    y1="20"
+                    x2="32"
+                    y2="30"
+                    stroke="var(--accent-blue)"
+                    stroke-width="1"
+                    opacity="0.5"
+                  />
+                </svg>
+                <div class="tags-row">
+                  <span
+                    class="tag tag-sm tag-teal"
+                    data-fr="Systèmes"
+                    data-en="Systems"
+                    >Systèmes</span
+                  >
+                </div>
+              </div>
+              <h3
+                id="proj-agents-title"
+                class="project-title"
+                data-fr="Simulation Multi-Agents"
+                data-en="Multi-Agent Simulation"
+              >
+                Simulation Multi-Agents
+              </h3>
+              <p
+                class="project-desc"
+                data-fr="Simulation à grande échelle de la coordination et prise de décision en logistique dynamique. 3000+ agents en concurrence via le système de messages de Go (goroutines)."
+                data-en="Large-scale simulation of coordination and decision-making in dynamic logistics. 3,000+ agents running concurrently via Go's messaging system (goroutines)."
+              >
+                Simulation à grande échelle de la coordination et prise de
+                décision en logistique dynamique. 3000+ agents en concurrence
+                via le système de messages de Go (goroutines).
+              </p>
+              <div class="tags-row">
+                <span class="tag tag-sm">Go</span>
+                <span class="tag tag-sm">Goroutines</span>
+                <span class="tag tag-sm">JavaScript</span>
+                <span
+                  class="tag tag-sm"
+                  data-fr="Modélisation"
+                  data-en="Modelling"
+                  >Modélisation</span
+                >
+              </div>
+              <a
+                href="https://github.com/eliasbelloumi/multi-agent-simulation-GoFood"
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub — Multi-Agent Simulation"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                GitHub
+              </a>
+            </article>
+
+            <!-- RNA-Seq / Transcriptomic Pipeline -->
+            <article
+              class="project-card animate-on-scroll"
+              data-tags="bioinformatics"
+              role="listitem"
+              aria-labelledby="proj-rna-title"
+            >
+              <div class="project-card-header">
+                <svg
+                  class="project-icon"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M 8 4 Q 20 12 8 20 Q 20 28 8 36"
+                    stroke="var(--accent-blue)"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <path
+                    d="M 32 4 Q 20 12 32 20 Q 20 28 32 36"
+                    stroke="var(--accent-teal)"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <line
+                    x1="8"
+                    y1="10"
+                    x2="32"
+                    y2="10"
+                    stroke="var(--accent-blue)"
+                    stroke-width="1"
+                    opacity="0.5"
+                  />
+                  <line
+                    x1="8"
+                    y1="20"
+                    x2="32"
+                    y2="20"
+                    stroke="var(--accent-teal)"
+                    stroke-width="1"
+                    opacity="0.5"
+                  />
+                  <line
+                    x1="8"
+                    y1="30"
+                    x2="32"
+                    y2="30"
+                    stroke="var(--accent-blue)"
+                    stroke-width="1"
+                    opacity="0.5"
+                  />
+                </svg>
+                <div class="tags-row">
+                  <span
+                    class="tag tag-sm tag-violet"
+                    data-fr="Bio-info"
+                    data-en="Bioinformatics"
+                    >Bio-info</span
+                  >
+                </div>
+              </div>
+              <h3
+                id="proj-rna-title"
+                class="project-title"
+                data-fr="Pipeline Transcriptomique"
+                data-en="Transcriptomic Pipeline"
+              >
+                Pipeline Transcriptomique
+              </h3>
+              <p
+                class="project-desc"
+                data-fr="Pipeline complet d'expression différentielle RNA-Seq (DESeq2) pour caractériser l'activation des cellules ILC2. Machine Learning (PCA, k-NN) sur données de micro-array leucémiques pour classifier les sous-types moléculaires."
+                data-en="Full RNA-Seq differential expression pipeline (DESeq2) to characterize ILC2 immune cell activation. Machine Learning (PCA, k-NN) on leukemia microarray data to classify molecular subtypes."
+              >
+                Pipeline complet d'expression différentielle RNA-Seq (DESeq2)
+                pour caractériser l'activation des cellules ILC2. Machine
+                Learning (PCA, k-NN) sur données de micro-array leucémiques pour
+                classifier les sous-types moléculaires.
+              </p>
+              <div class="tags-row">
+                <span class="tag tag-sm">R</span>
+                <span class="tag tag-sm">Bioconductor</span>
+                <span class="tag tag-sm">DESeq2</span>
+                <span class="tag tag-sm" data-fr="Génomique" data-en="Genomics"
+                  >Génomique</span
+                >
+              </div>
+            </article>
+
+            <!-- Carbon Dashboard -->
+            <article
+              class="project-card animate-on-scroll"
+              data-tags="data-eng"
+              role="listitem"
+              aria-labelledby="proj-carbon-title"
+            >
+              <div class="project-card-header">
+                <svg
+                  class="project-icon"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="4"
+                    y="28"
+                    width="6"
+                    height="8"
+                    fill="var(--accent-teal)"
+                    opacity="0.8"
+                    rx="1"
+                  />
+                  <rect
+                    x="13"
+                    y="20"
+                    width="6"
+                    height="16"
+                    fill="var(--accent-teal)"
+                    opacity="0.9"
+                    rx="1"
+                  />
+                  <rect
+                    x="22"
+                    y="14"
+                    width="6"
+                    height="22"
+                    fill="var(--accent-blue)"
+                    opacity="0.8"
+                    rx="1"
+                  />
+                  <rect
+                    x="31"
+                    y="8"
+                    width="6"
+                    height="28"
+                    fill="var(--accent-blue)"
+                    rx="1"
+                  />
+                  <path
+                    d="M 7 28 Q 16 20 25 14 Q 34 8 37 8"
+                    stroke="var(--accent-teal)"
+                    stroke-width="1.5"
+                    fill="none"
+                    stroke-dasharray="2,2"
+                  />
+                </svg>
+                <div class="tags-row">
+                  <span
+                    class="tag tag-sm tag-teal"
+                    data-fr="Data Eng"
+                    data-en="Data Eng"
+                    >Data Eng</span
+                  >
+                </div>
+              </div>
+              <h3
+                id="proj-carbon-title"
+                class="project-title"
+                data-fr="Dashboard Empreinte Carbone"
+                data-en="Carbon Footprint Dashboard"
+              >
+                Dashboard Empreinte Carbone
+              </h3>
+              <p
+                class="project-desc"
+                data-fr="Pipeline scalable PySpark pour normaliser les données d'émissions carbone de 6 sites internationaux. Architecture Star Schema et dashboard Streamlit avec classements automatisés et KPI prédictifs."
+                data-en="Scalable PySpark pipeline to normalize carbon emission data across 6 international sites. Star Schema architecture and Streamlit dashboard with automated rankings and predictive KPIs."
+              >
+                Pipeline scalable PySpark pour normaliser les données
+                d'émissions carbone de 6 sites internationaux. Architecture Star
+                Schema et dashboard Streamlit avec classements automatisés et
+                KPI prédictifs.
+              </p>
+              <div class="tags-row">
+                <span class="tag tag-sm">PySpark</span>
+                <span class="tag tag-sm">Python</span>
+                <span class="tag tag-sm">Streamlit</span>
+                <span class="tag tag-sm">SQL</span>
+                <span
+                  class="tag tag-sm"
+                  data-fr="Star Schema"
+                  data-en="Star Schema"
+                  >Star Schema</span
+                >
+              </div>
+              <a
+                href="https://github.com/eliasbelloumi/carbon-footprint-analytics-dashboard"
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub — Carbon Dashboard"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                GitHub
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EDUCATION ===== -->
+      <section id="education" aria-labelledby="education-heading">
+        <div class="section-container">
+          <span class="section-label" aria-hidden="true">05 — education</span>
+          <h2
+            id="education-heading"
+            class="section-title animate-on-scroll"
+            data-fr="Formation"
+            data-en="Education"
+          >
+            Formation
+          </h2>
+
+          <div class="education-grid">
+            <!-- UPC -->
+            <article
+              class="edu-card edu-card--upc animate-on-scroll"
+              aria-labelledby="edu-upc-title"
+            >
+              <div class="edu-card-header">
+                <div class="edu-logo" aria-hidden="true">
+                  <!-- Pulse line — biomedical / life sciences -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    id="edu-upc-title"
+                    class="edu-school"
+                    data-fr="Universitat Politècnica de Catalunya"
+                    data-en="Universitat Politècnica de Catalunya"
+                  >
+                    Universitat Politècnica de Catalunya
+                  </h3>
+                  <p class="edu-location">BarcelonaTech · Barcelona</p>
+                </div>
+              </div>
+              <p
+                class="edu-degree"
+                data-fr="Master en Ingénierie Interdisciplinaire et Innovante"
+                data-en="Master's in Interdisciplinary and Innovative Engineering"
+              >
+                Master en Ingénierie Interdisciplinaire et Innovante
+              </p>
+              <p class="edu-period">2025 — 2026</p>
+              <p
+                class="edu-detail"
+                data-fr="Application de l'IA et Data Science aux défis biomédicaux et des sciences du vivant."
+                data-en="Applying AI and Data Science to biomedical and life science challenges."
+              >
+                Application de l'IA et Data Science aux défis biomédicaux et des
+                sciences du vivant.
+              </p>
+              <div class="tags-row">
+                <span class="tag tag-sm">Bioinformatics (R)</span>
+                <span class="tag tag-sm">Biomedical Signal (MATLAB)</span>
+              </div>
+              <a
+                href="https://www.upc.edu/en/masters/interdisciplinary-and-innovative-engineering"
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-fr="En savoir plus"
+                data-en="Learn more"
+                >En savoir plus</a
+              >
+            </article>
+
+            <!-- UTC -->
+            <article
+              class="edu-card animate-on-scroll"
+              aria-labelledby="edu-utc-title"
+            >
+              <div class="edu-card-header">
+                <div class="edu-logo" aria-hidden="true">
+                  <!-- Code brackets — computer engineering / AI -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    id="edu-utc-title"
+                    class="edu-school"
+                    data-fr="Université de Technologie de Compiègne"
+                    data-en="Université de Technologie de Compiègne"
+                  >
+                    Université de Technologie de Compiègne
+                  </h3>
+                  <p class="edu-location">Sorbonne Universités · Compiègne</p>
+                </div>
+              </div>
+              <p
+                class="edu-degree"
+                data-fr="Diplôme d'Ingénieur — Génie Informatique, spécialité IA"
+                data-en="Engineering Degree — Computer Engineering, AI Track"
+              >
+                Diplôme d'Ingénieur — Génie Informatique, spécialité IA
+              </p>
+              <p class="edu-period">2024 — 2026</p>
+              <p
+                class="edu-detail"
+                data-fr="Spécialisation Machine Learning et architectures système."
+                data-en="Specialization in Machine Learning architectures and system implementation."
+              >
+                Spécialisation Machine Learning et architectures système.
+              </p>
+              <div class="tags-row">
+                <span class="tag tag-sm">Python (AI)</span>
+                <span class="tag tag-sm">SQL (Data Warehousing)</span>
+                <span class="tag tag-sm">Go (Multi-agent)</span>
+              </div>
+              <a
+                href="https://www.utc.fr/formations/diplome-dingenieur/genie-informatique-gi/filiere-intelligence-artificielle-et-science-des-donnees-iad/"
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-fr="En savoir plus"
+                data-en="Learn more"
+                >En savoir plus</a
+              >
+            </article>
+
+            <!-- HuTech -->
+            <article
+              class="edu-card animate-on-scroll"
+              aria-labelledby="edu-hutech-title"
+            >
+              <div class="edu-card-header">
+                <div class="edu-logo" aria-hidden="true">
+                  <!-- Compass — navigating between disciplines -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polygon
+                      points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    id="edu-hutech-title"
+                    class="edu-school"
+                    data-fr="Université de Technologie de Compiègne"
+                    data-en="Université de Technologie de Compiègne"
+                  >
+                    Université de Technologie de Compiègne
+                  </h3>
+                  <p class="edu-location">Sorbonne Universités · Compiègne</p>
+                </div>
+              </div>
+              <p
+                class="edu-degree"
+                data-fr="Programme HuTech"
+                data-en="HuTech Programme"
+              >
+                Programme HuTech
+              </p>
+              <p class="edu-period">2021 — 2024</p>
+              <p
+                class="edu-detail"
+                data-fr="Programme sélectif intégrant technologie, humanités et éthique pour concevoir des innovations socialement responsables."
+                data-en="Selective programme integrating technology, humanities and ethics to design socially responsible innovations."
+              >
+                Programme sélectif intégrant technologie, humanités et éthique
+                pour concevoir des innovations socialement responsables.
+              </p>
+              <div class="tags-row">
+                <span
+                  class="tag tag-sm"
+                  data-fr="Humanités & Éthique"
+                  data-en="Humanities & Ethics"
+                  >Humanités & Éthique</span
+                >
+              </div>
+              <a
+                href="https://www.utc.fr/en/courses-and-training/the-utc-engineering-diploma/humanities-and-technology-course-hutech/"
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-fr="En savoir plus"
+                data-en="Learn more"
+                >En savoir plus</a
+              >
+            </article>
+          </div>
+
+          <!-- Location pills -->
+          <div class="edu-locations">
+            <span class="edu-location-pill edu-location-pill--blue">
+              <span class="edu-location-dot"></span>
+              <span data-fr="Compiègne, France" data-en="Compiègne, France"
+                >Compiègne, France</span
+              >
+            </span>
+            <span class="edu-location-pill edu-location-pill--violet">
+              <span class="edu-location-dot"></span>
+              <span data-fr="Barcelone, Espagne" data-en="Barcelona, Spain"
+                >Barcelone, Espagne</span
+              >
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ENGAGEMENT ===== -->
+      <section id="engagement" aria-labelledby="engagement-heading">
+        <div class="section-container">
+          <span class="section-label" aria-hidden="true">06 — engagement</span>
+          <h2
+            id="engagement-heading"
+            class="section-title animate-on-scroll"
+            data-fr="Engagement associatif"
+            data-en="Volunteering"
+          >
+            Engagement associatif
+          </h2>
+
+          <article
+            class="engagement-card animate-on-scroll"
+            aria-labelledby="etuville-title"
+          >
+            <div class="engagement-body">
+              <div class="engagement-meta">
+                <div>
+                  <h3
+                    id="etuville-title"
+                    class="engagement-title"
+                    data-fr="Responsable IT"
+                    data-en="IT Lead"
+                  >
+                    Responsable IT
+                  </h3>
+                  <p class="engagement-org">
+                    Etuville — UTC · Compiègne ·
+                    <span class="timeline-location">2021 — 2024</span>
+                  </p>
+                </div>
+                <span
+                  class="tag tag-teal"
+                  data-fr="Bénévolat"
+                  data-en="Volunteering"
+                  >Bénévolat</span
+                >
+              </div>
+              <ul class="timeline-bullets">
+                <li
+                  data-fr="Direction d'une équipe de 5 bénévoles IT pour développer et déployer des outils de services étudiants"
+                  data-en="Led a team of 5 IT volunteers to develop and deploy student service tools"
+                >
+                  Direction d'une équipe de 5 bénévoles IT pour développer et
+                  déployer des outils de services étudiants
+                </li>
+                <li
+                  data-fr="Organisation d'événements de grande envergure : gala de remise des diplômes et soirée parc d'attractions"
+                  data-en="Organized large-scale events: graduation gala and theme park night"
+                >
+                  Organisation d'événements de grande envergure : gala de remise
+                  des diplômes et soirée parc d'attractions
+                </li>
+                <li
+                  data-fr="Coordination de projet : délégation des tâches et collaboration transversale"
+                  data-en="Project coordination: task delegation and cross-functional collaboration"
+                >
+                  Coordination de projet : délégation des tâches et
+                  collaboration transversale
+                </li>
+              </ul>
+              <div class="tags-row">
+                <span
+                  class="tag tag-sm"
+                  data-fr="Leadership"
+                  data-en="Leadership"
+                  >Leadership</span
+                >
+                <span
+                  class="tag tag-sm"
+                  data-fr="Gestion de projet"
+                  data-en="Project Management"
+                  >Gestion de projet</span
+                >
+                <span
+                  class="tag tag-sm"
+                  data-fr="Développement web"
+                  data-en="Web Development"
+                  >Développement web</span
+                >
+              </div>
+            </div>
+            <div class="engagement-highlights">
+              <div class="engagement-stat">
+                <span class="engagement-stat-number">5</span>
+                <span
+                  class="engagement-stat-label"
+                  data-fr="bénévoles encadrés"
+                  data-en="volunteers managed"
+                  >bénévoles encadrés</span
+                >
+              </div>
+              <div class="engagement-stat">
+                <span class="engagement-stat-number">1000+</span>
+                <span
+                  class="engagement-stat-label"
+                  data-fr="utilisateurs"
+                  data-en="users"
+                  >utilisateurs</span
+                >
+              </div>
+              <div class="engagement-stat">
+                <span class="engagement-stat-number">5000+</span>
+                <span
+                  class="engagement-stat-label"
+                  data-fr="participants"
+                  data-en="attendees"
+                  >participants</span
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" aria-labelledby="contact-heading">
+        <div class="section-container contact-container">
+          <span class="section-label" aria-hidden="true">07 — contact</span>
+          <h2
+            id="contact-heading"
+            class="section-title animate-on-scroll"
+            data-fr="Échangeons."
+            data-en="Let's talk."
+          >
+            Échangeons.
+          </h2>
+          <p
+            class="contact-sub animate-on-scroll"
+            data-fr="Toujours partant pour discuter de projets de recherche, d'idées à la croisée des disciplines, ou de tout sujet qui mérite qu'on s'y attarde."
+            data-en="Always happy to discuss research projects, ideas at the intersection of disciplines, or anything worth thinking about."
+          >
+            Toujours partant pour discuter de projets de recherche, d'idées à la
+            croisée des disciplines, ou de tout sujet qui mérite qu'on s'y
+            attarde.
+          </p>
+
+          <div class="contact-availability animate-on-scroll">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <span
+              id="availability-text"
+              data-fr="Ouvert aux échanges"
+              data-en="Open to conversations"
+              >Ouvert aux échanges</span
+            >
+          </div>
+
+          <div class="contact-actions animate-on-scroll">
+            <a
+              href="CV_BELLOUMI_ELIAS.pdf"
+              download
+              class="btn btn-cv"
+              data-fr="Télécharger le CV"
+              data-en="Download CV"
+              >Télécharger le CV</a
+            >
+            <a
+              href="https://www.linkedin.com/in/eliasbelloumi/"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-fr="Me contacter sur LinkedIn"
+              data-en="Connect on LinkedIn"
+              >Me contacter sur LinkedIn</a
+            >
+            <a
+              id="contact-email"
+              href="#"
+              class="btn btn-outline"
+              data-fr="Email"
+              data-en="Email"
+              >Email</a
+            >
+            <a
+              href="https://github.com/eliasbelloumi"
+              class="btn btn-ghost"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-fr="GitHub"
+              data-en="GitHub"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <span class="footer-copy">© 2026 Elias Belloumi</span>
+        <a href="#hero" class="footer-logo" aria-label="Retour en haut">↑</a>
+        <span
+          class="footer-tagline"
+          data-fr="Conçu avec curiosité."
+          data-en="Crafted with curiosity."
+          >Conçu avec curiosité.</span
+        >
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button
+      class="back-to-top"
+      id="back-to-top"
+      aria-label="Retour en haut de page"
+    >
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </button>
+
+    <!-- ===================== JS ===================== -->
+    <script src="js/i18n.js"></script>
+    <script src="js/typewriter.js"></script>
+
+    <!-- Third-party libs (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3/lib/anime.min.js"></script>
+
+    <!-- Custom -->
+    <script src="js/hero-rd.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/gsap-anim.js"></script>
+    <script src="js/anime-eeg.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+      (function () {
+        const btn = document.getElementById("back-to-top");
+        if (!btn) return;
+        window.addEventListener(
+          "scroll",
+          function () {
+            btn.classList.toggle("visible", window.scrollY > 400);
+          },
+          { passive: true },
+        );
+        btn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+    </script>
+  </body>
+</html>

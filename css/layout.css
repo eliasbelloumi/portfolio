@@ -1,0 +1,20 @@
+/* Sections */
+section {
+  padding: var(--section-py) 0;
+  position: relative;
+}
+
+section:nth-child(even) {
+  background: var(--bg-secondary);
+}
+
+.section-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-px);
+}
+
+/* Nav placeholder height */
+body { padding-top: 68px; }
+
+#hero { padding-top: 0; }
