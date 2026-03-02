@@ -92,7 +92,7 @@ footer {
     right: 0;
     bottom: 0;
     width: min(280px, 80vw);
-    background: rgba(8, 9, 12, 0.97);
+    background: var(--mobile-nav-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-left: 1px solid var(--border-color);

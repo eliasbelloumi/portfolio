@@ -13,7 +13,16 @@
   const PARTICLE_COUNT = 70;
   const CONNECT_DIST = 130;
   const SPEED = 0.3;
-  const COLORS = ['#4F8EF7', '#7C5CBF', '#2DD4A0'];
+
+  function getColors() {
+    const s = getComputedStyle(document.documentElement);
+    return [
+      s.getPropertyValue('--accent-blue').trim()   || '#0EA5C9',
+      s.getPropertyValue('--accent-violet').trim() || '#7C5CBF',
+      s.getPropertyValue('--accent-teal').trim()   || '#10B981',
+    ];
+  }
+  let COLORS = getColors();
 
   let W, H, particles = [], animId;
 
@@ -86,6 +95,14 @@
     particles.forEach(p => {
       p.x = Math.min(p.x, W);
       p.y = Math.min(p.y, H);
+    });
+  });
+
+  // Refresh colors on theme change
+  document.addEventListener('themechange', () => {
+    COLORS = getColors();
+    particles.forEach(p => {
+      p.color = COLORS[Math.floor(Math.random() * COLORS.length)];
     });
   });
 

@@ -168,8 +168,18 @@ document.addEventListener('DOMContentLoaded', function () {
       };
     }
 
+    function getRadarColors() {
+      const s = getComputedStyle(document.documentElement);
+      return {
+        grid:        s.getPropertyValue('--text-tertiary').trim()  || '#4A5060',
+        label:       s.getPropertyValue('--text-secondary').trim() || '#8A909E',
+        polyFill:    s.getPropertyValue('--accent-blue-dim').trim()|| 'rgba(14,165,201,0.15)',
+        polyStroke:  s.getPropertyValue('--accent-blue').trim()    || '#0EA5C9',
+      };
+    }
+
     // Draw grid rings
-    [0.25, 0.5, 0.75, 1].forEach(frac => {
+    const gridPolys = [0.25, 0.5, 0.75, 1].map(frac => {
       const points = axes.map((_, i) => {
         const p = polarToCart(maxR * frac, i);
         return `${p.x},${p.y}`;
@@ -177,22 +187,24 @@ document.addEventListener('DOMContentLoaded', function () {
       const poly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
       poly.setAttribute('points', points);
       poly.setAttribute('fill', 'none');
-      poly.setAttribute('stroke', '#4A5060');
+      poly.setAttribute('stroke', getRadarColors().grid);
       poly.setAttribute('stroke-width', '0.8');
       poly.setAttribute('opacity', '0.5');
       radarSvg.appendChild(poly);
+      return poly;
     });
 
     // Draw axis lines
-    axes.forEach((_, i) => {
+    const axisLines = axes.map((_, i) => {
       const p = polarToCart(maxR, i);
       const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
       line.setAttribute('x1', cx); line.setAttribute('y1', cy);
       line.setAttribute('x2', p.x); line.setAttribute('y2', p.y);
-      line.setAttribute('stroke', '#4A5060');
+      line.setAttribute('stroke', getRadarColors().grid);
       line.setAttribute('stroke-width', '0.8');
       line.setAttribute('opacity', '0.5');
       radarSvg.appendChild(line);
+      return line;
     });
 
     // Score polygon (animated)
@@ -203,8 +215,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const scorePoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
     scorePoly.setAttribute('points', scorePoints.join(' '));
-    scorePoly.setAttribute('fill', 'rgba(79,142,247,0.15)');
-    scorePoly.setAttribute('stroke', '#4F8EF7');
+    scorePoly.setAttribute('fill', getRadarColors().polyFill);
+    scorePoly.setAttribute('stroke', getRadarColors().polyStroke);
     scorePoly.setAttribute('stroke-width', '2');
     radarSvg.appendChild(scorePoly);
 
@@ -215,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
       circle.setAttribute('cx', p.x);
       circle.setAttribute('cy', p.y);
       circle.setAttribute('r', '4');
-      circle.setAttribute('fill', '#4F8EF7');
+      circle.setAttribute('fill', getRadarColors().polyStroke);
       radarSvg.appendChild(circle);
       return circle;
     });
@@ -232,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
       text.setAttribute('y', p.y);
       text.setAttribute('text-anchor', 'middle');
       text.setAttribute('dominant-baseline', 'middle');
-      text.setAttribute('fill', '#8A909E');
+      text.setAttribute('fill', getRadarColors().label);
       text.setAttribute('font-family', 'Inter, sans-serif');
       text.setAttribute('font-size', '11');
       text.textContent = ax.label[getCurrentLang()];
@@ -245,6 +257,17 @@ document.addEventListener('DOMContentLoaded', function () {
       labelEls.forEach(({ el, ax }) => {
         el.textContent = ax.label[e.detail.lang];
       });
+    });
+
+    // Update colors on theme change
+    document.addEventListener('themechange', () => {
+      const c = getRadarColors();
+      gridPolys.forEach(p => p.setAttribute('stroke', c.grid));
+      axisLines.forEach(l => l.setAttribute('stroke', c.grid));
+      scorePoly.setAttribute('fill', c.polyFill);
+      scorePoly.setAttribute('stroke', c.polyStroke);
+      dotEls.forEach(d => d.setAttribute('fill', c.polyStroke));
+      labelEls.forEach(({ el }) => el.setAttribute('fill', c.label));
     });
 
     // Animate in on scroll

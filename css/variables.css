@@ -22,6 +22,12 @@
   --border-color:   rgba(255,255,255,0.07);
   --border-hover:   rgba(14, 165, 201, 0.35);
 
+  /* Component-specific (extracted from hardcoded values) */
+  --navbar-bg:           rgba(13, 15, 20, 0.85);
+  --mobile-nav-bg:       rgba(8, 9, 12, 0.97);
+  --hero-vignette-color: 8, 9, 12;
+  --project-featured-bg: linear-gradient(135deg, #0D1420 0%, #0E1825 100%);
+
   /* Typography */
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
@@ -44,4 +50,32 @@
   /* Shadows */
   --shadow-card: 0 4px 24px rgba(0,0,0,0.35);
   --shadow-hover: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+/* ===================== LIGHT THEME ===================== */
+[data-theme="light"] {
+  --bg-primary:    #F8F9FC;
+  --bg-secondary:  #EFF1F7;
+  --bg-tertiary:   #E4E7F0;
+  --bg-card:       #FFFFFF;
+
+  --accent-blue-dim:   rgba(14, 165, 201, 0.12);
+  --accent-violet-dim: rgba(124, 92, 191, 0.12);
+  --accent-teal-dim:   rgba(16, 185, 129, 0.12);
+  --accent-coral-dim:  rgba(201, 168, 76, 0.12);
+
+  --text-primary:   #0D0F14;
+  --text-secondary: #4A5060;
+  --text-tertiary:  #8A909E;
+
+  --border-color:  rgba(0,0,0,0.09);
+  --border-hover:  rgba(14, 165, 201, 0.45);
+
+  --navbar-bg:           rgba(248, 249, 252, 0.90);
+  --mobile-nav-bg:       rgba(248, 249, 252, 0.98);
+  --hero-vignette-color: 248, 249, 252;
+  --project-featured-bg: linear-gradient(135deg, #E8EEF8 0%, #EDF2FB 100%);
+
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.10);
+  --shadow-hover: 0 8px 40px rgba(0,0,0,0.18);
 }

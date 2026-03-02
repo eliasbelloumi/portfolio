@@ -5,7 +5,7 @@
   right: 0;
   z-index: 1000;
   height: 68px;
-  background: rgba(13, 15, 20, 0.85);
+  background: var(--navbar-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);

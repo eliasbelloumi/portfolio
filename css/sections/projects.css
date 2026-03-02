@@ -44,7 +44,7 @@
 }
 
 .project-featured-visual {
-  background: linear-gradient(135deg, #0D1420 0%, #0E1825 100%);
+  background: var(--project-featured-bg);
   display: flex;
   align-items: center;
   justify-content: center;
