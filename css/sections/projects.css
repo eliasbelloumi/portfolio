@@ -166,13 +166,8 @@
 }
 .project-link:hover { color: var(--accent-blue); }
 
-/* Filtered state: dim in place, no reordering */
-.project-card.filtered-out {
-  opacity: 0.22;
-  pointer-events: none;
-}
-
+/* Filtered state: hide non-matching cards */
+.project-card.filtered-out,
 .project-featured.filtered-out {
-  opacity: 0.22;
-  pointer-events: none;
+  display: none;
 }
