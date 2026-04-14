@@ -1,0 +1,322 @@
+/* Prevent body scroll — bento grid fills viewport exactly */
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+@media (max-width: 900px) {
+  html, body {
+    overflow: auto;
+    height: auto;
+  }
+}
+
+/* ===================== BENTO TOPBAR ===================== */
+.bento-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.bento-topbar-logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.bento-topbar-logo:hover { opacity: 0.8; }
+
+.bento-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* ===================== BENTO GRID ===================== */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "hero  hero  about  skills"
+    "hero  hero  proj   proj"
+    "xp    edu   engage contact";
+  gap: 1rem;
+  padding: 1rem;
+  height: calc(100vh - 52px);
+  overflow: hidden;
+}
+
+/* ===================== HERO TILE ===================== */
+.bento-hero {
+  grid-area: hero;
+  background: linear-gradient(145deg, var(--bg-secondary) 40%, rgba(162, 148, 196, 0.10) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.bento-hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.bento-hero-role {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.bento-hero-specializations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.bento-hero-spec-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.bento-hero-tagline {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.bento-hero-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bento-hero-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-teal);
+}
+
+.bento-hero-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-teal);
+  box-shadow: 0 0 8px var(--accent-teal);
+  flex-shrink: 0;
+}
+
+.bento-hero-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bento-hero-link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.bento-hero-link:hover { color: var(--accent-blue); }
+
+.bento-hero-cv {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+  margin-left: auto;
+}
+.bento-hero-cv:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+/* ===================== BENTO TILES ===================== */
+
+/* Per-section muted tones for gradient + hover border */
+.bento-tile[data-section="about"]      { --tile-rgb: 162, 148, 196; } /* mauve doux */
+.bento-tile[data-section="skills"]     { --tile-rgb: 120, 168, 200; } /* bleu ardoise */
+.bento-tile[data-section="projects"]   { --tile-rgb: 192, 165, 105; } /* ambre antique */
+.bento-tile[data-section="experience"] { --tile-rgb: 122, 176, 148; } /* sauge */
+.bento-tile[data-section="education"]  { --tile-rgb: 162, 148, 196; } /* mauve doux */
+.bento-tile[data-section="engagement"] { --tile-rgb: 120, 168, 200; } /* bleu ardoise */
+.bento-tile[data-section="contact"]    { --tile-rgb: 122, 176, 148; } /* sauge */
+
+.bento-tile {
+  background: linear-gradient(160deg, var(--bg-card) 35%, rgba(var(--tile-rgb), 0.09) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition:
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  text-align: left;
+}
+
+.bento-tile:hover {
+  border-color: rgba(var(--tile-rgb), 0.45);
+  transform: scale(1.015);
+  box-shadow: 0 8px 32px rgba(var(--tile-rgb), 0.12);
+}
+
+.bento-tile[data-section="about"]      { grid-area: about; }
+.bento-tile[data-section="skills"]     { grid-area: skills; }
+.bento-tile[data-section="projects"]   { grid-area: proj; }
+.bento-tile[data-section="experience"] { grid-area: xp; }
+.bento-tile[data-section="education"]  { grid-area: edu; }
+.bento-tile[data-section="engagement"] { grid-area: engage; }
+.bento-tile[data-section="contact"]    { grid-area: contact; }
+
+/* Labels reprennent la couleur pastel de la tile */
+.bento-tile .bento-tile-label { color: rgb(var(--tile-rgb)); }
+
+.bento-tile-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 0.1rem;
+}
+
+.bento-tile-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.bento-tile-preview {
+  font-family: var(--font-body);
+  font-size: 0.79rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.bento-tile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.bento-tile-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 8px;
+  background: rgba(var(--tile-rgb), 0.1);
+  color: var(--text-secondary);
+  border: 1px solid rgba(var(--tile-rgb), 0.2);
+}
+
+.bento-tile-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  margin-top: 0.15rem;
+}
+
+.bento-contact-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  display: inline-block;
+  margin-right: 0.4rem;
+  box-shadow: 0 0 6px #10B981;
+  flex-shrink: 0;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hero   hero"
+      "about  skills"
+      "proj   proj"
+      "xp     edu"
+      "engage contact";
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .bento-hero {
+    min-height: 280px;
+  }
+
+  .bento-tile-preview {
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "about"
+      "skills"
+      "proj"
+      "xp"
+      "edu"
+      "engage"
+      "contact";
+  }
+
+  .bento-hero {
+    min-height: 240px;
+  }
+}
