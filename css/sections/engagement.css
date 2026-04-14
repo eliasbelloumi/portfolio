@@ -1,22 +1,10 @@
 .engagement-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-left: 3px solid var(--accent-violet);
-  border-radius: var(--radius-md);
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  overflow: hidden;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-.engagement-card:hover {
-  border-color: rgba(124, 92, 191, 0.4);
-  border-left-color: var(--accent-violet);
-  box-shadow: 0 4px 24px rgba(124, 92, 191, 0.08);
+  border-top: 1px solid var(--border-color);
+  padding-top: 2.5rem;
 }
 
 .engagement-body {
-  padding: 1.75rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -30,10 +18,9 @@
 }
 
 .engagement-title {
-  font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--accent-violet);
   margin-bottom: 0.2rem;
 }
 
@@ -42,39 +29,3 @@
   color: var(--text-secondary);
 }
 
-/* Right: impact highlights */
-.engagement-highlights {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0;
-  padding: 1.75rem 2rem;
-  background: rgba(124, 92, 191, 0.05);
-  border-left: 1px solid rgba(124, 92, 191, 0.15);
-  min-width: 140px;
-}
-
-.engagement-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(124, 92, 191, 0.1);
-}
-.engagement-stat:last-child { border-bottom: none; }
-
-.engagement-stat-number {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--accent-violet);
-  line-height: 1;
-}
-
-.engagement-stat-label {
-  font-size: 0.72rem;
-  color: var(--text-secondary);
-  margin-top: 0.25rem;
-  font-family: var(--font-body);
-}

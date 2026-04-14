@@ -23,40 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     revealEls.forEach(el => el.classList.add('visible'));
   }
 
-  // ===================== COUNTER ANIMATION =====================
-  // Animates .stat-number[data-target] from 0 to the target value using
-  // an easeOutExpo curve — fast start, smooth finish.
-  function easeOutExpo(t) {
-    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-  }
-
-  function animateCounter(el, target, duration) {
-    const start = performance.now();
-    function step(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const value = Math.round(easeOutExpo(progress) * target);
-      el.textContent = value >= 1000 ? value.toLocaleString('fr-FR') : value;
-      if (progress < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-
-  const counterEls = document.querySelectorAll('.stat-number[data-target]');
-  if (counterEls.length) {
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const target = parseInt(entry.target.dataset.target, 10);
-          const duration = target > 1000 ? 2000 : 1200;
-          animateCounter(entry.target, target, duration);
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    counterEls.forEach(el => counterObserver.observe(el));
-  }
-
   // ===================== TERMINAL TYPING =====================
   const terminalBody = document.getElementById('terminal-body');
   if (terminalBody) {
@@ -137,6 +103,23 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }, { threshold: 0.3 });
     terminalObserver.observe(terminalBody);
+  }
+
+  // ===================== 3D TILT ON PROJECT CARDS =====================
+  if (!prefersReducedMotion) {
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const rotX = ((y - rect.height / 2) / rect.height) * -10;
+        const rotY = ((x - rect.width / 2) / rect.width) * 10;
+        card.style.transform = `perspective(700px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.03)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)';
+      });
+    });
   }
 
   // EEG PATH ANIMATION — handled by anime-eeg.js (Anime.js stroke-dashoffset)

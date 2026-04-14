@@ -4,8 +4,8 @@ section {
   position: relative;
 }
 
-section:nth-child(even) {
-  background: var(--bg-secondary);
+section + section {
+  border-top: 1px solid var(--border-color);
 }
 
 .section-container {
@@ -13,8 +13,3 @@ section:nth-child(even) {
   margin: 0 auto;
   padding: 0 var(--container-px);
 }
-
-/* Nav placeholder height */
-body { padding-top: 68px; }
-
-#hero { padding-top: 0; }

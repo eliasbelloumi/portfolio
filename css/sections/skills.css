@@ -1,43 +1,82 @@
+/* Skills layout — editorial table */
 .skills-layout {
   display: block;
 }
 
 .skills-tags-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Each group: label column | items column */
+.skill-group {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 13rem 1fr;
+  align-items: baseline;
   gap: 2rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--border-color);
+}
+.skill-group:last-child {
+  border-bottom: 1px solid var(--border-color);
 }
 
 .skill-group-title {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-family: var(--font-mono);
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 0;
 }
 
-/* Methods — full-width strip below the tags grid */
+/* Naked tags inside skill groups */
+.skill-group .tag,
+.methods-row .tag {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 400;
+  padding: 0;
+  border-radius: 0;
+  cursor: default;
+}
+
+.skill-group .tags-row,
+.methods-row .tags-row {
+  margin-top: 0;
+  gap: 0 1.2rem;
+}
+
+/* Methods row — same grid pattern */
 .methods-row {
-  margin-top: 1.75rem;
-  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 13rem 1fr;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1.1rem 0;
   border-top: 1px solid var(--border-color);
+  margin-top: 0;
 }
 .methods-row .skill-group-title {
   display: block;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0;
 }
 
-/* Languages — single horizontal strip below the tags grid */
+/* Languages row — same grid pattern */
 .languages-row {
-  margin-top: 2rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--border-color);
-  display: flex;
+  display: grid;
+  grid-template-columns: 13rem 1fr;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 0;
 }
-
 .languages-row .skill-group-title {
   margin-bottom: 0;
   flex-shrink: 0;
@@ -46,48 +85,45 @@
 .lang-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0 2rem;
 }
 
 .lang-item {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  padding: 0.5rem 0.9rem;
-  transition: border-color var(--transition-fast);
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }
-.lang-item:hover { border-color: var(--border-hover); }
 
 .lang-name {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--text-primary);
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--text-secondary);
 }
 
 .lang-level {
   font-size: 0.72rem;
   font-family: var(--font-mono);
-  padding: 0.15rem 0.5rem;
-  border-radius: 20px;
+  padding: 0;
+  border-radius: 0;
 }
 
-.lang-level--native {
-  background: rgba(14,165,201,0.12);
-  color: var(--accent-blue);
-  border: 1px solid rgba(14,165,201,0.2);
-}
-
-.lang-level--fluent {
-  background: rgba(16,185,129,0.1);
-  color: var(--accent-teal);
-  border: 1px solid rgba(16,185,129,0.2);
-}
-
+.lang-level--native,
+.lang-level--fluent,
 .lang-level--inter {
-  background: rgba(124,92,191,0.1);
-  color: var(--accent-violet);
-  border: 1px solid rgba(124,92,191,0.2);
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 640px) {
+  .skill-group,
+  .methods-row,
+  .languages-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
 }

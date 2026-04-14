@@ -1,129 +1,102 @@
+/* Education — editorial list */
 .education-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 0;
 }
 
 .edu-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 1.75rem;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
+  transition: none;
 }
-.edu-card:hover {
-  border-color: var(--border-hover);
-  box-shadow: var(--shadow-card);
-}
+.edu-card:first-child { border-top: none; padding-top: 0; }
+.edu-card:hover { border-color: var(--border-color); box-shadow: none; }
+
+/* No left accent */
+.edu-card--upc { border-left: none; }
+
+/* Hide decorative logo */
+.edu-logo { display: none; }
 
 .edu-card-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.edu-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-sm);
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.8rem;
-  color: var(--accent-blue);
-  flex-shrink: 0;
+  display: block;
+  margin-bottom: 0.2rem;
+  gap: 0;
 }
 
 .edu-school {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.3;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.1rem;
+  color: var(--text-primary);
 }
 
 .edu-location {
   font-size: 0.78rem;
   color: var(--text-tertiary);
   font-family: var(--font-mono);
+  margin-bottom: 0.6rem;
+  display: block;
 }
 
 .edu-degree {
   font-size: 0.92rem;
   font-weight: 500;
-  color: var(--accent-blue);
-  margin-bottom: 0.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
 }
+
+/* Override UPC blue */
+.edu-card--upc .edu-degree { color: var(--text-primary); }
 
 .edu-period {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: var(--text-tertiary);
+  color: var(--accent-blue);
   margin-bottom: 0.75rem;
 }
 
 .edu-detail {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.65;
+  margin-bottom: 0.75rem;
 }
 
-/* UPC — violet (research / interdisciplinary) */
-.edu-card--upc {
-  border-left: 3px solid var(--accent-violet);
-}
-.edu-card--upc .edu-logo  { color: var(--accent-violet); }
-.edu-card--upc .edu-degree { color: var(--accent-violet); }
-
-
-/* Location pills */
-.edu-locations {
-  margin-top: 2rem;
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.edu-location-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 1rem;
-  border-radius: 20px;
+/* Naked tags for courses */
+.edu-card .tag-sm {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 500;
-  border: 1px solid;
+  font-size: 0.72rem;
+  padding: 0;
+  border-radius: 0;
 }
 
-.edu-location-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  flex-shrink: 0;
+.edu-card .tags-row {
+  margin-top: 0.5rem;
+  gap: 0 1rem;
 }
 
-.edu-location-pill--blue {
-  background: rgba(14,165,201,0.08);
+.edu-card .project-link {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  padding-top: 0.75rem;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  display: inline;
+}
+.edu-card .project-link:hover {
   color: var(--accent-blue);
-  border-color: rgba(14,165,201,0.25);
-}
-.edu-location-pill--blue .edu-location-dot {
-  background: var(--accent-blue);
-  box-shadow: 0 0 0 3px rgba(14,165,201,0.2);
+  border-bottom-color: var(--accent-blue);
 }
 
-.edu-location-pill--violet {
-  background: rgba(124,92,191,0.08);
-  color: var(--accent-violet);
-  border-color: rgba(124,92,191,0.25);
-}
-.edu-location-pill--violet .edu-location-dot {
-  background: var(--accent-violet);
-  box-shadow: 0 0 0 3px rgba(124,92,191,0.2);
-}
+/* Hide colored location pills */
+.edu-locations { display: none; }
